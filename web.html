@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>IEPEAS - Form Seleksi Member</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0c1a;
+    color: #eee;
+    min-height: 100vh;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+  .menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    color: #eee;
+  }
+  h1 {
+    margin: 0;
+    font-weight: 800;
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: white;
+  }
+
+  p.subtitle {
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.95rem;
+    margin: 0.5rem 1rem 2rem;
+    color: #ccc;
+  }
+
+  main {
+    max-width: 360px;
+    margin: 0 auto 2rem;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #ff9933;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 0.7rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    color: #eee;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    background: #282c41;
+    color: #eee;
+    outline: none;
+    resize: vertical;
+    box-sizing: border-box;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #999;
+  }
+
+  textarea {
+    min-height: 70px;
+    border-radius: 25px;
+  }
+
+  .checkbox-group {
+    margin-bottom: 1rem;
+  }
+
+  .checkbox-group label {
+    font-weight: 600;
+    color: #ddd;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+
+  .radio-group label {
+    margin-right: 1.2rem;
+  }
+
+  input[type="radio"] {
+    margin-right: 0.3rem;
+  }
+
+  .info-text {
+    font-size: 0.85rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .submit-btn {
+    background-color: #ff6622;
+    color: white;
+    padding: 0.85rem 1.2rem;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 3px 10px #ff662244;
+    transition: background-color 0.3s ease;
+  }
+  .submit-btn:hover {
+    background-color: #e55a1c;
+  }
+
+  .footer-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #ccc;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="menu-icon">&#9776;</div>
+  <h1><span>🌸</span>FORM SELEKSI MEMBER<span>🌸</span></h1>
+</header>
+
+<p class="subtitle">Sebelum bergabung, isilah form dengan jujur dan jelas.<br>Lakukan semua menjadi penilaian awal.</p>
+
+<main>
+  <section>
+    <h2>1. Identitas</h2>
+    <label for="nama">Nama asli :</label>
+    <input type="text" id="nama" name="nama" placeholder="Contoh: Sato Ichiro" required />
+    
+    <label for="umur">Umur :</label>
+    <input type="number" id="umur" name="umur" min="13" max="120" placeholder="20" required />
+    
+    <label for="kota">Asal kota :</label>
+    <input type="text" id="kota" name="kota" placeholder="Tokyo, Osaka, Kyoto, dll" required />
+  </section>
+
+  <section>
+    <h2>2. Riwayat Komunitas</h2>
+    <label for="riwayat">Apakah kamu punya komunitas/marga lain?</label>
+    <textarea id="riwayat" name="riwayat" placeholder="Jika tidak ada, tulis: Tidak"></textarea>
+  </section>
+
+  <section>
+    <h2>3. Tujuan Bergabung</h2>
+    <label for="tujuan">Apa alasan dan tujuan kamu masuk Marga IEAS</label>
+    <textarea id="tujuan" name="tujuan" placeholder="Tuliskan alasan dengan jelas..."></textarea>
+  </section>
+
+  <section>
+    <h2>4. Pengetahuan Dasar</h2>
+    <p class="info-text">(Pilih minimal satu - wajib)</p>
+
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="iep" name="pengetahuan" value="IEP" /> 🚀 IEAS → Sebutkan Nebula</label>
+      <input type="text" placeholder="Contoh: Nebula Orion, Nebula Eyes" />
+    </div>
+
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="eas" name="pengetahuan" value="EAS" /> 🪐 IEAS → Sebutkan planet</label>
+      <input type="text" placeholder="Contoh: Mars, Jupiter, Saturnus" />
+    </div>
+  </section>
+
+  <section>
+    <h2>5. Komitmen</h2>
+    <label>Apakah kamu siap membantu jika ada masalah di marga? (wajib)</label>
+    <div class="radio-group">
+      <label><input type="radio" name="komitmen_masalah" value="Ya" required /> Ya</label>
+      <label><input type="radio" name="komitmen_masalah" value="Tidak" /> Tidak</label>
+    </div>
+    <label>Apakah kamu berjanji tidak membuat kerusuhan dan tidak menjatuhkan pihak lain? (wajib)</label>
+    <div class="radio-group">
+      <label><input type="radio" name="komitmen_kerusuhan" value="Ya" required /> Ya</label>
+      <label><input type="radio" name="komitmen_kerusuhan" value="Tidak" /> Tidak</label>
+    </div>
+  </section>
+
+  <p class="info-text">📢 Sebelum kirim jawaban: <br>Follow akun marga: <strong>@</strong></p>
+
+  <button class="submit-btn" onclick="kirimJawaban()">📱 Kirim Jawaban ke WhatsApp 📱</button>
+
+  <p class="footer-text">⛰️ 和の心 - Terima kasih sudah mendaftar.<br>Semoga kamu menjadi bagian dari komunitas yang solid dan positif.</p>
+</main>
+
+<script>
+  function kirimJawaban() {
+    // Ambil semua nilai input
+    const nama = document.getElementById('nama').value.trim();
+    const umur = document.getElementById('umur').value.trim();
+    const kota = document.getElementById('kota').value.trim();
+
+    const riwayat = document.getElementById('riwayat').value.trim();
+    const tujuan = document.getElementById('tujuan').value.trim();
+
+    const iepChecked = document.getElementById('iep').checked;
+    const easChecked = document.getElementById('eas').checked;
+
+    const iepInput = document.querySelector('input[placeholder="Contoh: Boeing 787, F-16"]').value.trim();
+    const easInput = document.querySelector('input[placeholder="Contoh: Mars, Jupiter, Saturnus"]').value.trim();
+
+    const komitmenMasalah = document.querySelector('input[name="komitmen_masalah"]:checked');
+    const komitmenKerusuhan = document.querySelector('input[name="komitmen_kerusuhan"]:checked');
+
+    if (!nama || !umur || !kota || !komitmenMasalah || !komitmenKerusuhan) {
+      alert('Mohon lengkapi semua kolom wajib!');
+      return;
+    }
+
+    if (!iepChecked && !easChecked) {
+      alert('Pilih minimal satu pengetahuan dasar (Luar Angkasa)!');
+      return;
+    }
+
+    if (iepChecked && !iepInput) {
+      alert('Mohon isi pengetahuan Astronomy');
+      return;
+    }
+
+    if (easChecked && !easInput) {
+      alert('Mohon isi pengetahuan planet!');
+      return;
+    }
+
+    // Buat pesan WhatsApp
+    let pesan = '*FORM SELEKSI MEMBER IEAS*\n\n';
+    pesan += '*1. Identitas*\n';
+    pesan += `Nama asli: ${nama}\nUmur: ${umur}\nAsal kota: ${kota}\n\n`;
+    pesan += '*2. Riwayat Komunitas*\n';
+    pesan += riwayat ? riwayat + '\n\n' : 'Tidak ada\n\n';
+    pesan += '*3. Tujuan Bergabung*\n';
+    pesan += tujuan ? tujuan + '\n\n' : '-\n\n';
+    pesan += '*4. Pengetahuan Dasar*\n';
+    if (iepChecked) {
+      pesan += `IEP - Pesawat: ${iepInput}\n`;
+    }
+    if (easChecked) {
+      pesan += `EAS - Planet: ${easInput}\n`;
+    }
+    pesan += '\n*5. Komitmen*\n';
+    pesan += `Siap membantu jika ada masalah di marga: ${komitmenMasalah.value}\n`;
+    pesan += `Berjanji tidak membuat kerusuhan dan tidak menjatuhkan pihak lain: ${komitmenKerusuhan.value}\n`;
+
+    // Encode pesan untuk url
+    const encodedPesan = encodeURIComponent(pesan);
+
+    // WhatsApp tujuan (ganti nomor sesuai admin)
+    const nomorWhatsApp = '+6285188424726';
+
+    // Buka WhatsApp dengan pesan
+    window.open(`https://wa.me/${6285188424726}?text=${encodedPesan}`, '_blank');
+  }
+</script>
+
+</body>
+</html>

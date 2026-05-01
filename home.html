@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>IEAS - Home</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0c1a;
+    color: #eee;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+  ::selection {
+    background: #2d99ff;
+    color: #fff;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+  .menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    color: #eee;
+  }
+  h1 {
+    margin: 0;
+    font-weight: 800;
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: white;
+  }
+  h1 span {
+    font-size: 1.7rem;
+  }
+  h2.subtitle {
+    text-align: center;
+    font-weight: 400;
+    color: #ccc;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-box {
+    background: rgba(20, 27, 50, 0.9);
+    max-width: 330px;
+    text-align: center;
+    margin: 0 auto 2rem;
+    padding: 0.7rem 1rem;
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #cfd5db;
+    box-shadow: 0 0 10px #2d99ff55;
+  }
+  .info-box p {
+    margin: 0.25rem 0;
+  }
+
+  section.keunggulan {
+    max-width: 360px;
+    margin: 0 auto 2rem;
+    background: rgba(20, 27, 50, 0.9);
+    padding: 1rem 1rem 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #2d99ff55;
+  }
+  .keunggulan-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3598ff;
+    padding-bottom: 0.3rem;
+  }
+  .keunggulan-list {
+    margin: 0;
+    padding-left: 1rem;
+    list-style: none;
+  }
+  .keunggulan-list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+    font-weight: 500;
+    color: #dcdcdc;
+  }
+  .keunggulan-list li span {
+    margin-right: 0.5rem;
+  }
+
+  .btn-daftar {
+    display: block;
+    width: 200px;
+    margin: 1rem auto 2rem;
+    background-color: #4099ff;
+    border-radius: 30px;
+    padding: 0.8rem 1rem;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 2px 10px #4099ffaa;
+    transition: background-color 0.3s ease;
+    user-select: none;
+  }
+  .btn-daftar:hover {
+    background-color: #1877ff;
+  }
+
+  .note {
+    max-width: 340px;
+    color: #aaa;
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+    margin: -1.3rem auto 1rem;
+  }
+
+  section.peraturan {
+    max-width: 360px;
+    margin: 0 auto 2.5rem;
+    background: rgba(20, 27, 50, 0.9);
+    padding: 1.3rem 1rem 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #2d99ff55;
+    font-size: 0.9rem;
+    color: #d9d9d9;
+    line-height: 1.3;
+  }
+  section.peraturan h3 {
+    color: #a88cd9;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  section.peraturan ul {
+    padding-left: 1.2rem;
+    margin: 0;
+    list-style-type: disc;
+  }
+  section.peraturan ul li {
+    margin-bottom: 0.8rem;
+  }
+  section.peraturan ul li strong {
+    color: #f9d71c;
+  }
+
+  section.tentang-kami {
+    max-width: 360px;
+    margin: 0 auto 2rem;
+    background: rgba(20, 27, 50, 0.9);
+    padding: 1rem 1rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #2d99ff55;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #ccc;
+  }
+  section.tentang-kami h3 {
+    color: #b6a3e3;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  section.tentang-kami p {
+    text-align: justify;
+    margin: 0 0 1rem;
+  }
+  section.tentang-kami p strong {
+    color: #f9d71c;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="menu-icon">&#9776;</div>
+  <h1><span>🌠</span>IEAS<span>🌠</span></h1>
+</header>
+
+<h2 class="subtitle">Marga Komunitas Solid & Positif</h2>
+
+<div class="info-box">
+  <p>🚀 IEAS : International Education Astronomy Sains</p>
+</div>
+
+<section class="keunggulan">
+  <h3 class="keunggulan-title">✨ Keunggulan Marga</h3>
+  <ul class="keunggulan-list">
+    <li>⭐ Pengetahuan tentang sains</li>
+    <li>🪐 Eksplorasi planet dan ilmu antariksa</li>
+    <li>🤝 Saling membantu dalam masalah sesama anggota</li>
+    <li>✨ Komunitas tanpa kerusuhan, penuh positif</li>
+    <li>📚 Menambah ilmu</li>
+  </ul>
+</section>
+
+<a href="web.html" class="btn-daftar">📝 Daftar Sekarang</a>
+
+<p class="note">"Kami menjunjung nilai kesopanan, etika, dan adab, untuk kamu yang mau join diharapkan untuk mematuhi peraturan yang ada"</p>
+
+<section class="peraturan">
+  <h3>📜 Peraturan Wajib Marga</h3>
+  <ul>
+    <li>no pedofil, mau hal apapun bercanda dll, dilarang keras</li>
+    <li>No Toxic</li>
+    <li>Kirim Foto minimal sekali lihat kecuali PENTING!!</li>
+    <li>Harus Toleransi</li>
+    <li>Ga boleh ada yang merendahkan</li>
+    <li>Ga boleh membeda-bedakan Agama dan Suku</li>
+    <li>Ga boleh kirim stiker Jomok/18+</li>
+    <li>Usia 13 tahun+</li>
+    <li>No buat ricuh sama marga lain!!!</li>
+    <li>Nomor admin dan member lainnya dilarang disebar ya!!!</li>
+    <li>Wajib pakai nama tiktok IEPEAS</li>
+    <li>Dilarang Spam/Kirim *LINK GA JELAS*</li>
+    <li><strong> *Setiap mau upload video gunakan #MARGAIEAS*</strong></li>
+    <li><strong> *Dilarang menjatuhkan orang*</strong></li>
+    <li><strong> *Gak intro kick*</strong></li>
+  </ul>
+</section>
+
+<section class="tentang-kami">
+  <h3>📖 Tentang Kami</h3>
+  <p>Marga IEAS lahir dari kecintaan terhadap dunia luar angkasa <strong>(International Education Astronomy)</strong> dan eksplorasi pengetahuan Sains <strong>(International Education Sains)</strong>. Kami percaya bahwa pengetahuan dan solidaritas adalah kunci untuk berkembang bersama.</p>
+  <p>Visi kami: menjadi komunitas yang menginspirasi, saling mendukung, dan berkontribusi positif bagi masyarakat luas. Misi kami: menyediakan wadah diskusi yang sehat, membantu anggota yang mengalami kesulitan, serta menjaga nama baik marga dengan integritas.</p>
+  <p>📍 <strong>Motto:</strong> "Bersama kita sains tinggi, bersama kita jelajah alam semesta."</p>
+  <p>🤝 Bergabunglah dan rasakan kekeluargaan yang hangat!</p>
+</section>
+
+</body>
+</html>
